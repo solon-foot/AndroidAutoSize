@@ -48,7 +48,7 @@ public final class AutoSizeConfig {
     private static final String KEY_DESIGN_WIDTH_IN_DP = "design_width_in_dp";
     private static final String KEY_DESIGN_HEIGHT_IN_DP = "design_height_in_dp";
     public static final boolean DEPENDENCY_ANDROIDX;
-    public static final boolean DEPENDENCY_SUPPORT;
+//    public static final boolean DEPENDENCY_SUPPORT = false;
     private Application mApplication;
     /**
      * 用来管理外部三方库 {@link Activity} 的适配
@@ -162,7 +162,6 @@ public final class AutoSizeConfig {
 
     static {
         DEPENDENCY_ANDROIDX = findClassByClassName("androidx.fragment.app.FragmentActivity");
-        DEPENDENCY_SUPPORT = findClassByClassName("android.support.v4.app.FragmentActivity");
     }
 
     private static boolean findClassByClassName(String className) {
